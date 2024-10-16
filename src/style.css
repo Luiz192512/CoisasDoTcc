@@ -1,0 +1,61 @@
+/* src/styles.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-body: 'Sora', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Fira Mono', monospace;
+}
+
+/* Estilos para o body */
+body {
+    @apply font-sora text-black bg-[#F9F2ED]; /* Substitua 'font-sora' por uma classe personalizada, se necessário */
+}
+
+/* Botões */
+button.primary {
+    @apply bg-[#BC764E] text-white border-none py-2 px-4 cursor-pointer transition-colors duration-300;
+}
+
+button.primary:hover {
+    @apply bg-[#EDD6CB];
+}
+
+button.secondary {
+    @apply bg-[#EDD6CB] text-white border-none py-2 px-4 cursor-pointer transition-colors duration-300;
+}
+
+/* Header e Footer */
+header, footer {
+    @apply bg-[#313131] text-white p-5;
+}
+
+/* Cartões */
+.card {
+    @apply bg-white border border-[#E5E5E5] p-5 m-2 transition-shadow duration-300;
+}
+
+.card:hover {
+    @apply shadow-lg;
+}
+
+/* Links */
+a {
+    @apply text-[#BC764E] no-underline transition-colors duration-300;
+}
+
+a:hover {
+    @apply text-[#EDD6CB];
+}
+
+/* Estilos de fonte */
+@layer base {
+    @font-face {
+        font-family: 'Sora';
+        src: url('/path-to-your-font/Sora.woff2') format('woff2');
+        font-weight: 400; /* ou o peso que você quiser */
+        font-style: normal; /* ou italic */
+    }
+}
